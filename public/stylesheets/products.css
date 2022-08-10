@@ -1,0 +1,68 @@
+
+.home-products{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  list-style: none;
+  animation-name: appear;
+  animation-duration: 2s;
+}
+.home-products li{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+}
+.home-products li img{
+  max-width: 250px;
+
+}
+.home-products li > strong{
+  font-size: 16px;
+  color: #333;
+  line-height: 20px;
+  margin-top: 5px;
+}
+.home-products li > span{
+  font-size: 21px;
+  font-weight: bold;
+  margin: 5px 0 20px;
+}
+.home-products li button{
+  border: 0;
+  background: #7159c1;
+  color: #fff;
+  border-radius: 4px;
+  margin-top: auto;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+.home-products li button:hover{
+  /* background: ${darken(0.03, '#7159c1')}; */
+  opacity: 0.3;
+}
+.home-products li button div{
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+.home-products li button div svg{
+  margin-right: 5px;
+}
+.home-products li button > span{
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+.home-container{
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>carrinbo</title>
+    <link rel='stylesheet' href='/stylesheets/reset.css' />
+    <link rel='stylesheet' href='/stylesheets/cart.css' />
+  </head>
+  <body>
+    <div class="cart-container">
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th> </th>
+            <th>PRODUTO</th>
+            <th>QTD</th>
+            <th>SUBTOTAL</th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody id="cart-item-cart">
+          <% cart.forEach(function(item) { %>
+            
+            <tr>
+              <td>
+                <img src="<%= item.image %>" alt="" />
+              </td>
+              <td>
+                <strong><%= item.title %></strong>
+                <span><%= item.price %></span>
+              </td>
+              <td>
+                <div>
+                  <button type="button" onclick="" >
+                    <div>Remove icon</div>
+                  </button>
+                  <input type="number" readOnly value="<%= item.amount %>" />
+                  <button type="button" onclick="" >
+                    <div>Add icon</div>
+                  </button>
+                </div>
+              </td>
+              <td>
+                <strong><%= item.subTotal %></strong>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  onclick="" 
+                >
+                  <MdDelete size={20} color="#7159c1" />
+                </button>
+              </td>
+            </tr>
+          <% }); %> 
+          
+        </tbody>
+      </table>
+      <footer class="cart-footer">
+        <button type="button">Finalizar Pedido</button>
+        <div class="cart-total">
+          <span>Total</span>
+          <strong><%= total %></strong>
+        </div>
+      </footer>
+  
+    </div>
+  </body>
+</html>
