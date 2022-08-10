@@ -4,26 +4,35 @@
     <title>produtos</title>
     <link rel='stylesheet' href='/stylesheets/reset.css' />
     <link rel='stylesheet' href='/stylesheets/products.css' />
+    <script src="/javascripts/cart.js"></script>
   </head>
   <body>
     <div class="home-container">
       <ul class="home-products" id="home-list-products">
-        
+        <% products.forEach(function(product) { %>
+          
           <li>
-            <img src='' alt=''/>
-            <strong>{product.title}</strong>
-            <span>{product.formatPrice}</span>
+            <img src='<%= product.image %>' alt=''/>
+            <strong><%= product.title %></strong>
+            <span><%= product.price %></span>
             <button
               type="button"
-              onclick=''
+              onclick="addToCart({
+                id:<%= product.id %>,
+                title:'<%= product.title %>',
+                image:'<%= product.image %>',
+                price:<%= product.price %>,
+              })"
             >
               <div>
                 <div>Icon Cart</div>
-                {amount[product.id] || 0}
+                0
               </div>
               <span>ADICIONAR AO CARRINHO</span>
             </button>
           </li>
+       <% }); %> 
+         
       </ul>
   </div>
   </body>

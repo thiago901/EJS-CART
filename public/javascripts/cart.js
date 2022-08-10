@@ -27,7 +27,8 @@ function getCookie(name) {
   return cookies.substring(begin + prefix.length, end);
 }
 function getCart (){
-  let cart = getCookie()
+  let cart = getCookie(KEY_STORAGE);
+  console.log('cart===',cart);
   if(!cart){
     cart='[]';
   }

@@ -9,13 +9,14 @@ router.get('/', function(req, res, next) {
     cart='[]';
   }
   cart = JSON.parse(cart);
+  console.log(cart);
   const cartFormatted = cart.map(item=>({
     ...item,
     subTotal:item.price * item.amount
   }))
   const total = cartFormatted.reduce((acc,current)=>acc+Number(current.subTotal),0)
   res.render('cart',{
-    cart,
+    cart:cartFormatted,
     total
   });
 });
