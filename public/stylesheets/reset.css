@@ -4,6 +4,18 @@
   box-sizing:border-box;
   padding:0;
 }
+.link{
+  
+  background: #7159c1;
+  
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0 ;
+}
+.link a{
+  text-decoration: none;
+  color: #fff;
+}
 body{
   /* background:#191920 url(${background}) no-repeat center top; */
   background:#191920;
